@@ -3,8 +3,7 @@ import { useState } from "react";
 import { TaskCard } from "./TaskCard";
 import { BoxCard } from "./BoxCard";
 
-export const TaskList = ({tasks, setTasks, title }) => {
-  
+export const TaskList = ({ tasks, setTasks, title }) => {
   const [show, setShow] = useState(true);
 
   function handleDelete(id) {
@@ -15,12 +14,12 @@ export const TaskList = ({tasks, setTasks, title }) => {
     <div>
       <h1>{title}</h1>
       <ul>
-        <button class="trigger" onClick={() => setShow(!show)}>
+        <button className="trigger" onClick={() => setShow(!show)}>
           Toggle
         </button>
         {show &&
           tasks.map((task) => (
-            <TaskCard
+            <TaskCard key={task.id}
               id={task.id}
               name={task.name}
               completed={task.completed}
