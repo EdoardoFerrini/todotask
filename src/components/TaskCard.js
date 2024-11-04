@@ -1,11 +1,11 @@
 import "./TaskCard.css";
 
-export const TaskCard = ({ key, name, completed, handleDelete }) => {
+export const TaskCard = ({ id, name, completed, handleDelete }) => {
   return (
     <div>
-      <li key={key} className={completed ? "completed" : "incomplete"}>
+      <li key={id} className={completed ? "completed" : "incomplete"}>
         <span>{name}</span>
-        <button className="delete" onClick={() => handleDelete(key)}>
+        <button className="delete" onClick={() => handleDelete(id)}>
           Delete
         </button>
       </li>
