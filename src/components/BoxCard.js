@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./BoxCard.css";
 
 export const BoxCard = ({ classname, children }) => {
   const [show, setShow] = useState(true);
